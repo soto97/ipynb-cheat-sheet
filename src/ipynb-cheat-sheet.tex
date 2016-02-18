@@ -84,7 +84,7 @@
 \includegraphics[width=0.92\columnwidth]{imgs/ipynblogo}\\[0.47em]
 \hfill\Large Cheat Sheet
 \let\thefootnote\relax
-\footnote{By Luis Martí --- \url{http://github.com/lmarti/ipybn-cheat-sheet}}
+\footnote{Originally Luis Martí --- \url{http://github.com/lmarti/ipybn-cheat-sheet}. Updated by Alejandro Soto --- \url{http://github.com/soto97/ipybn-cheat-sheet}.}
 \rule{\columnwidth}{0.11pt}
 }
 \section{iPython notebook}
@@ -95,8 +95,8 @@ $ ipython notebook
 \section{General}
 \begin{tabular}{@{}r@{\;}l@{}}
 	\texttt{help}: &	access to docstrings and Python manuals \\
-	\verb+%magic+: &	information on the 'magic' subsystem\\
-	\verb+%alias+: & 	system command aliases \\
+	\texttt{\%magic}: &	information on the 'magic' subsystem\\
+	\texttt{\%alias}: & 	system command aliases \\
 \end{tabular}
 
 \section{Magic}
@@ -105,8 +105,16 @@ The magic function system provides a series of functions which allow you to
 control the behavior of IPython itself, plus a lot of system-type
 features.
 
+\begin{tabular}{@{}r@{\;}l@{}}
+	\texttt{\%matplotlib inline}: & plots inside the notebook \\
+	\texttt{\%timeit}: & Time execution of code\\
+\end{tabular}
+
+
 %load:     Load code into the current frontend.
 %lsmagic:    List currently available magic functions.
+
+%matplotlib:     %matplotlib [gui]
 
 %matplotlib:     %matplotlib [gui]
 
@@ -124,42 +132,43 @@ features.
 
 
 \section{Keyboard shortcuts}
+These commands are entered in the `Command Mode'. To enter Command Mode, either type \texttt{Esc} or \texttt{Ctrl-m}.
 
 \subsection{General}
 \begin{tabular}{@{}r@{\;}l@{}}
 	\texttt{Tab}: &			completion in the local namespace \\
-	\texttt{Ctrl-m s}: &	save notebook \\
-	\texttt{Ctrl-m h}: &	show keyboard shortcuts \\
-	\texttt{Ctrl-m l}: & 	toggle line numbers \\
+	\texttt{s}: &	save notebook \\
+	\texttt{h}: &	show keyboard shortcuts \\
+	\texttt{l}: & 	toggle line numbers \\
 	\texttt{Ctrl-r}: & 		search history \\
 \end{tabular}
 
 \subsection{Editing}
 \begin{tabular}{@{}r@{\;}l@{}}
-	\texttt{Ctrl-m x}: &	cut cell \\
-    \texttt{Ctrl-m c}: &	copy cell \\
-	\texttt{Ctrl-m v}: &	paste cell \\
-	\texttt{Ctrl-m d}: &	delete cell \\
-	\texttt{Ctrl-m z}: &	undo last cell deletion \\
+	\texttt{x}: &	cut cell \\
+    \texttt{c}: &	copy cell \\
+	\texttt{v}: &	paste cell \\
+	\texttt{d}: &	delete cell \\
+	\texttt{z}: &	undo last cell deletion \\
 \end{tabular}
 
 \subsection{Cell management}
 \begin{tabular}{@{}r@{\;}l@{}}
-	\texttt{Ctrl-m -}: &	split cell \\
-	\texttt{Ctrl-m a}: &	insert cell above $\uparrow$ \\
-	\texttt{Ctrl-m b}: &	insert cell below $\downarrow$ \\
-	\texttt{Ctrl-m k}: &	move cell up $\uparrow$ \\
-	\texttt{Ctrl-m j}: &	move cell down $\downarrow$ \\
-	\texttt{Ctrl-m p}: &	select previous $\uparrow$ \\
-	\texttt{Ctrl-m n}: &	select next $\downarrow$ \\
+	\texttt{-}: &	split cell \\
+	\texttt{a}: &	insert cell above $\uparrow$ \\
+	\texttt{b}: &	insert cell below $\downarrow$ \\
+	\texttt{k}: &	move cell up $\uparrow$ \\
+	\texttt{j}: &	move cell down $\downarrow$ \\
+	\texttt{p}: &	select previous $\uparrow$ \\
+	\texttt{n}: &	select next $\downarrow$ \\
 \end{tabular}
 
 \subsection{Cell formatting}
 \begin{tabular}{@{}r@{\;}l@{}}
-	\texttt{Ctrl-m y}: &	code cell \\
-	\texttt{Ctrl-m m}: &	markdown cell \\
-	\texttt{Ctrl-m t}: &	raw cell \\
-	\texttt{Ctrl-m 1-6}: &	heading 1--6 cell \\
+	\texttt{y}: &	code cell \\
+	\texttt{m}: &	markdown cell \\
+	\texttt{t}: &	raw cell \\
+	\texttt{1-6}: &	heading 1--6 cell \\
 \end{tabular}
 
 \subsection{Execution control}
@@ -167,10 +176,10 @@ features.
 	\texttt{Shift-Enter}: &	run cell \\
 	\texttt{Ctrl-Enter}: &	run cell in-place \\
 	\texttt{Alt-Enter}: &	run cell, insert below \\	
-	\texttt{Ctrl-m i}: &	interrupt kernel \\
-	\texttt{Ctrl-m .}: &	restart kernel \\
-	\texttt{Ctrl-m o}: &	toggle output \\
-	\texttt{Ctrl-m 0}: &	toggle output scroll \\
+	\texttt{i}: &	interrupt kernel \\
+	\texttt{.}: &	restart kernel \\
+	\texttt{o}: &	toggle output \\
+	\texttt{0}: &	toggle output scroll \\
 \end{tabular}
 
 \section{Cool packages}
@@ -179,17 +188,16 @@ features.
 	Plotly: &	https://plot.ly/api/ipython \\
 	\texttt{Ctrl-Enter}: &	run cell in-place \\
 	\texttt{Alt-Enter}: &	run cell, insert below \\	
-	\texttt{Ctrl-m i}: &	interrupt kernel \\
-	\texttt{Ctrl-m .}: &	restart kernel \\
-	\texttt{Ctrl-m o}: &	toggle output \\
-	\texttt{Ctrl-m 0}: &	toggle output scroll \\
+	\texttt{i}: &	interrupt kernel \\
+	\texttt{.}: &	restart kernel \\
+	\texttt{o}: &	toggle output \\
+	\texttt{0}: &	toggle output scroll \\
 \end{tabular}
 
-autojit
 % You can even have references
-\rule{0.3\linewidth}{0.25pt}
+%\rule{0.3\linewidth}{0.25pt}
 \scriptsize
-%\bibliographystyle{abstract}
+%\bibliographystyle{abstract}q
 %\bibliography{refFile}
 \end{multicols}
 
